@@ -24,7 +24,7 @@ export default function OrganizationRequestList() {
 
     const getReqOrgList=async()=>{
         try{
-            const data=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/reqorglist`);
+            const data=await axios.get(`https://food-for-all-backend.onrender.com/admin/reqorglist`);
             setDatatable(data.data)
 
         }catch(e){
@@ -88,7 +88,7 @@ export default function OrganizationRequestList() {
           }).then((willDelete) => {
             if (willDelete) {
               axios
-                .delete(`https://online-food-donation-system-backend-1.onrender.com/admin/deletereqorg/${id}`)
+                .delete(`https://food-for-all-backend.onrender.com/admin/deletereqorg/${id}`)
                 .then(() => {
                   if (willDelete) {
                     swal("The Organization Register Request Has Been Successfully Deleted!", { icon: "success" })

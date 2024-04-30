@@ -52,7 +52,7 @@ export default function DonatorDashboard() {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://online-food-donation-system-backend-1.onrender.com/deleteDonation/${id}`)
+          .delete(`https://food-for-all-backend.onrender.com/deleteDonation/${id}`)
           .then((res) => {
             if (willDelete) {
               swal("Item Succesfully Deleted!!", {
@@ -143,7 +143,7 @@ export default function DonatorDashboard() {
     setLoading(true);
     //fetching all inbound item data from the database
     axios
-      .get(`https://online-food-donation-system-backend-1.onrender.com/donator/getOngoingDonations/${userID}`)
+      .get(`https://food-for-all-backend.onrender.com/donator/getOngoingDonations/${userID}`)
       .then((res) => {
         setLoading(false);
 
@@ -164,7 +164,7 @@ export default function DonatorDashboard() {
 
     //fetching all inbound item data from the database
     axios
-      .get(`https://online-food-donation-system-backend-1.onrender.com/donator/getCompletedDonations/${userID}`)
+      .get(`https://food-for-all-backend.onrender.com/donator/getCompletedDonations/${userID}`)
       .then((res) => {
         setLoading(false);
 

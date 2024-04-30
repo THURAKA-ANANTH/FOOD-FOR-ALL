@@ -28,7 +28,7 @@ export default function AdminEditOrg() {
     const fetchOrg=async()=>{
         console.log(id)
         await axios
-        .get(`https://online-food-donation-system-backend-1.onrender.com/admin/vieworg/${id}`)
+        .get(`https://food-for-all-backend.onrender.com/admin/vieworg/${id}`)
         .then((res)=>{
             console.log(res)
             setOrgId(res.data.org._id);
@@ -74,7 +74,7 @@ export default function AdminEditOrg() {
       sname
     };
 //     await axios
-//       .put(`https://online-food-donation-system-backend-1.onrender.com/admin/editorg/${id}`, Organization)
+//       .put(`https://food-for-all-backend.onrender.com/admin/editorg/${id}`, Organization)
 //       .then((res) => {
 //         console.log(res);
 //       })
@@ -92,7 +92,7 @@ swal({
   }).then((willDelete) => {
     if (willDelete) {
       axios
-        .put(`https://online-food-donation-system-backend-1.onrender.com/admin/editorg/${id}`, Organization)
+        .put(`https://food-for-all-backend.onrender.com/admin/editorg/${id}`, Organization)
         .then(() => {
           if (willDelete) {
             swal("The Organization Details Successfully Updated !", { icon: "success" })

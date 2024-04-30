@@ -21,7 +21,7 @@ export default function OrganizationRequestList() {
 
     const getReqOrgList=async()=>{
         try{
-            const data=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/approvedorg`);
+            const data=await axios.get(`https://food-for-all-backend.onrender.com/admin/approvedorg`);
             setDatatable(data.data)
 
         }catch(e){

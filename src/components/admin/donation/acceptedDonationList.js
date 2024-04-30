@@ -22,7 +22,7 @@ export default function GetAcceptedDonations() {
 
     const getReqOrgList=async()=>{
         try{
-            const data=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/getaccepteddon/`);
+            const data=await axios.get(`https://food-for-all-backend.onrender.com/admin/getaccepteddon/`);
             setDatatable(data.data)
 
         }catch(e){
@@ -51,7 +51,7 @@ export default function GetAcceptedDonations() {
           }).then((willDelete) => {
             if (willDelete) {
               axios
-                .put(`https://online-food-donation-system-backend-1.onrender.com/admin/rejectdonation/${id}`)
+                .put(`https://food-for-all-backend.onrender.com/admin/rejectdonation/${id}`)
                 .then(() => {
                   if (willDelete) {
                     swal("The Donation Request Has Been Rejected!", { icon: "success" })

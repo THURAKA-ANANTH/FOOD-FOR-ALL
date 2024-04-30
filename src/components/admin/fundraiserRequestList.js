@@ -22,7 +22,7 @@ export default function FundraiserRequestList() {
 
     const getReqOrgList=async()=>{
         try{
-            const data=await axios.get(`https://online-food-donation-system-backend-1.onrender.com/admin/reqfunds`);
+            const data=await axios.get(`https://food-for-all-backend.onrender.com/admin/reqfunds`);
             setDatatable(data.data)
 
         }catch(e){
@@ -51,7 +51,7 @@ export default function FundraiserRequestList() {
           }).then((willDelete) => {
             if (willDelete) {
               axios
-                .delete(`https://online-food-donation-system-backend-1.onrender.com/fund/delete/${id}`)
+                .delete(`https://food-for-all-backend.onrender.com/fund/delete/${id}`)
                 .then(() => {
                   if (willDelete) {
                     swal("The Fundraiser Request Has Been Successfully Deleted!", { icon: "success" })
@@ -79,7 +79,7 @@ export default function FundraiserRequestList() {
           }).then((willDelete) => {
             if (willDelete) {
               axios
-                .put(`https://online-food-donation-system-backend-1.onrender.com/admin/upfundstatus/${id}`)
+                .put(`https://food-for-all-backend.onrender.com/admin/upfundstatus/${id}`)
                 .then(() => {
                   if (willDelete) {
                     swal("The Fundraiser Request Has Been Successfully Updated!", { icon: "success" })

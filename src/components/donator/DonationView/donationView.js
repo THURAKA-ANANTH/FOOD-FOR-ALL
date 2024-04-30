@@ -51,7 +51,7 @@ export default function DonationView() {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        axios.put(`https://online-food-donation-system-backend-1.onrender.com/admin/updostauts/${id}`).then(() => {
+        axios.put(`https://food-for-all-backend.onrender.com/admin/updostauts/${id}`).then(() => {
           if (willDelete) {
             swal("The Donation Request Has Been Successfully Accepted!", {
               icon: "success",
@@ -77,7 +77,7 @@ export default function DonationView() {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .put(`https://online-food-donation-system-backend-1.onrender.com/admin/rejectdonation/${id}`)
+          .put(`https://food-for-all-backend.onrender.com/admin/rejectdonation/${id}`)
           .then(() => {
             if (willDelete) {
               swal("The Donation Request Has Been Rejected!", {

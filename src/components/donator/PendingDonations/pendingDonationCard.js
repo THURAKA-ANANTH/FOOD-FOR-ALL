@@ -14,7 +14,7 @@ export default function PendingDonationCard(props) {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://online-food-donation-system-backend-1.onrender.com/donator/deleteDonation/${id}`)
+          .delete(`https://food-for-all-backend.onrender.com/donator/deleteDonation/${id}`)
           .then((res) => {
             if (willDelete) {
               swal("Item Succesfully Deleted!!", {
